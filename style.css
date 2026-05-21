@@ -1,0 +1,70 @@
+* {
+    box-sizing: border-box;
+}
+
+header {
+    margin: 0 auto;
+    max-width: 70%;
+    display: flex;
+    font-size: 24px;
+    padding: 0px;
+    background-color: rgb(17, 0, 255);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    color: #fff;
+    border-bottom: 10px solid black;
+    flex-direction: column;
+    align-items: center;
+
+
+}
+
+h1 {
+    margin: 10px
+}
+
+.container {
+    max-width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(150, 145, 145);
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+#principal-buttons {
+    margin-bottom: 10px;
+}
+
+.btn-novatarefa {
+    background-color: greenyellow;
+}
+
+.btn-novatarefa:hover {
+    background-color: green;
+    transform: scale(1.1);
+}
+
+#tarefas {
+    display: none;
+}
+
+#inp-tarefa {
+    padding: 10px;
+}
+
+li {
+    list-style: none;
+    font-size: 22px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
