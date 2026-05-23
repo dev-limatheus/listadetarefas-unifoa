@@ -1,32 +1,32 @@
-const novatarefa = document.getElementById('novatarefa')
-const excluir = document.getElementById('excluir')
-const tarefas = document.getElementById('tarefas')
-const cancelar = document.getElementById('cancelar')
-const adicionar = document.getElementById('adicionar')
-const text = document.getElementById('inp-tarefa')
+botao_novatarefa = document.getElementById('novatarefa')
+tarefas = document.getElementById('tarefas')
+adicionar = document.getElementById('adicionar')
+cancelar = document.getElementById('cancelar')
+texto = document.getElementById('inp-tarefa')
+lista = document.getElementById('lista')
 
-novatarefa.addEventListener('click', function tarefaopen() {
-    tarefas.style.display = 'block';
-});
 
-cancelar.addEventListener('click', function cancelartarefa() {
-    tarefas.style.display = 'none'
-});
+function nova_tarefa() {
+    console.log('clicou')
+    tarefas.style.display = 'block'
+    botao_novatarefa.style.display = 'none'
+}
 
-adicionar.addEventListener('click', (e) => {
-    const valor = text.value.trim();
-    if (!valor) { alert('Digite uma tarefa'); text.focus(); return }
-
-    let lista = document.getElementById('lista-tarefas');
-    if (!lista) {
-        lista = document.createElement('ul');
-        lista.id = 'lista-tarefas';
-        document.querySelector('.container').appendChild(lista);
+function adicionar_tarefa() {
+    const valor = texto.value;
+    if (!valor || valor.trim() === '') {
+        alert('Digite sua tarefa');
+        return;
+    } else {
+        const novaTarefa = document.createElement('li');
+        novaTarefa.textContent = valor.trim();
+        lista.appendChild(novaTarefa);
+        lista.style.display = 'block';
+        texto.value = '';
     }
+}
 
-    const li = document.createElement('li');
-    li.textContent = valor;
-    lista.appendChild(li);
-
-    text.value = '';
-});
+function cancelar_tarefa() {
+    tarefas.style.display = 'none'
+    botao_novatarefa.style.display = 'block'
+}
