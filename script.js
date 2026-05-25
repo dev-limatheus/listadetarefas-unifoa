@@ -20,8 +20,23 @@ function adicionar_tarefa() {
     } else {
         const novaTarefa = document.createElement('li');
         novaTarefa.textContent = valor.trim();
+
+        const botaoExcluir = document.createElement('button');
+        botaoExcluir.textContent = 'X';
+
+        
+        novaTarefa.addEventListener('click', () => {
+            novaTarefa.classList.toggle('concluida');
+        });
+        
         lista.appendChild(novaTarefa);
+        novaTarefa.appendChild(botaoExcluir);
         lista.style.display = 'block';
+
+        botaoExcluir.addEventListener('click', () => {
+            novaTarefa.remove()
+        });
+        
         texto.value = '';
     }
 }
