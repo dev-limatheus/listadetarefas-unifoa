@@ -7,21 +7,27 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
-      <h1>Lista de Tarefas</h1>
-    </header>
     <div class="container">
+      <header>
+        <h1>Lista de Tarefas</h1>
+      </header>
+      <div class="container">
         <div id="principal-buttons">
-          <button onclick="nova_tarefa()" class="btn-novatarefa" id="novatarefa">
+          <button
+            onclick="nova_tarefa()"
+            class="btn-novatarefa"
+            id="novatarefa"
+          >
             Nova tarefa
           </button>
         </div>
-      <div class="tarefas" id="tarefas">
-        <input type="text" id="inp-tarefa" placeholder="Nova tarefa" />
-        <button onclick="adicionar_tarefa()" id="adicionar">Adicionar</button>
-        <button onclick="cancelar_tarefa()" id="cancelar">Cancelar</button>
+        <div class="tarefas" id="tarefas">
+          <input type="text" id="inp-tarefa" placeholder="Nova tarefa" />
+          <button onclick="adicionar_tarefa()" id="adicionar">Adicionar</button>
+          <button onclick="cancelar_tarefa()" id="cancelar">Cancelar</button>
+        </div>
+        <ul id="lista"></ul>
       </div>
-      <ul id="lista"></ul>
     </div>
   </body>
   <script src="script.js"></script>
